@@ -28,7 +28,6 @@ function Cards() {
   }, [user]);
   return (
     <div className='flex justify-center items-center'>
-      <p>the key is :-{key}</p>
       {user.length === 0 ?
 
         <div
