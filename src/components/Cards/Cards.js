@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import "./Cards.css"
 import Details from '../Details/Details';
+const key = process.env.REACT_APP_BACKEND_KEY;
 
 
 function Cards() {
-  const key = process.env.REACT_APP_BACKEND_KEY;
   const [user, setUser] = useState([]);
   const [active, setActive] = useState(false);
 
@@ -28,6 +28,7 @@ function Cards() {
   }, [user]);
   return (
     <div className='flex justify-center items-center'>
+      <p>the key is :-{key}</p>
       {user.length === 0 ?
 
         <div
